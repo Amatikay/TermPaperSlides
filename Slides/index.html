@@ -17,7 +17,6 @@
 ## Тема:
 **Выявление факторов влияющих на формирование научных групп и команд ТГУ на основе библиометрического анализа.**
 
-<br><br>
 
 - Выполнил: Энгельке С.А
 - Научный руководитель: Кабанова Т.В
@@ -59,15 +58,16 @@
 </textarea></section>
 </section>
 <section>
-<section data-markdown  ><textarea data-template>
+<section data-markdown  data-background-color="aquamarine"  ><textarea data-template>
+
 ## Описание модели SAOM
 *Акторы* контролируют свои исходящие связи. 
-Совокупность изменений сети актором $i$ образую потоку Пуассона с параметром $\lambda_{i}$​
+Совокупность изменений сети актором $i$ образую поток Пуассона с параметром $\lambda_{i}$​
 
 Совокупный поток выборов всех акторов - поток Пуассона с парамтером $\lambda$.
 
 </textarea></section>
-<section data-markdown  ><textarea data-template>
+<section data-markdown  data-background-color="aquamarine"  ><textarea data-template>
 
 Модель представляет собой алгоритм
 1. Задаем $t= t_{m}, x = x(t_m)$
@@ -75,7 +75,7 @@
 
 
 </textarea></section>
-<section data-markdown  ><textarea data-template>
+<section data-markdown  data-background-color="aquamarine"  ><textarea data-template>
 
 3. Если $t+\Delta T > t_{m+1}$ установить $t=t_{m+1}$ и остановиться
 4. Выбираем случайного актора $i \in 1..n$   используя вероятности $\frac{\lambda_i}{\lambda}$
@@ -89,18 +89,24 @@
 8. К шагу (2)
 
 </textarea></section>
+</section>
+<section>
 <section data-markdown  ><textarea data-template>
 
-Таким образом моедель разбивается на 2 подмодели.<br>
-Время и вероятность изменения.
+## Вероятность изменения связи $i \leftrightarrow j$
+
+$P \{  X(t+\Delta t ) = x^{\pm} | X(t) = x \}  = \frac{ exp(f_i (x,x^{(\pm ij)},\beta) ) }{\sum_h exp(f_i (x,x^{(\pm ih)},\beta) ) }$
+
+обозначим как $p_{ij} (x,\beta)$
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
 
 </textarea></section>
 </section>
-<section data-markdown  data-background-color="aquamarine><textarea data-template>
-
-
-
+<section data-markdown ><textarea data-template>
 # Спасибо за внимние! 
+
 </textarea></section>
 			</div>
 		</div>
