@@ -68,9 +68,54 @@
 $P \{  X(t+\Delta t ) = x^{\pm} | X(t) = x \}  = \frac{ exp(f_i (x,x^{(\pm ij)},\beta) ) }{\sum_h exp(f_i (x,x^{(\pm ih)},\beta) ) }$
 
 обозначим как $p_{ij} (x,\beta)$
+
 [comment]: # (|||)
 
+Функция полезности $f(x,x^{(\pm),\beta} = \sum_{k} \beta_k s_{ki}(x^{(0)},x)$,<br>
+где $s_{ki}(x^{(0)},x)$ функция сети $i$ актора.
 
-[comment]: # (!!! )
-# Спасибо за внимние! 
+[comment]: # (|||)
+
+$k$ индекс указывает на реализацию функции сети.<br>
+На основе сформированной гипотезы, прикладным специалистом, выбирается конкретная реализация. <br>
+Пример базовой реализации (исходящие степени).
+$s_{1i} = \sum_j x_{ij}$
+
+[comment]: # (!!!)
+
+## Результаты
+
+```
+Estimates, standard errors and convergence t-ratios
+
+                                    Estimate   Standard   Convergence
+                                               Error      t-ratio 
+
+Rate parameters: 
+  0.1      Rate parameter period 1  0.2317  ( 0.0053   )
+  0.2      Rate parameter period 2  0.1678  ( 0.0091   )
+
+Other parameters: 
+  1.  rate effect ln(degree+1)    
+  on rate co_authorship  			1.6070  ( 0.0224   )    0.0157 
+  2.  eval degree (density)        -3.2147  ( 0.0123   )   -0.0174
+  3.  eval transitive triads        0.4268  ( 0.0140   )   -0.0005
+  4.  eval trans. triads intermed.
+  exp_covar                        -0.0018  ( 0.0006   )    0.0112
+Overall maximum convergence ratio:    0.0508 
+```
+[comment]: # (|||)
+### Интерператция
+
+- С увеличением количества исходящих связей снижается вероятность
+появления новой связи
+-  С увеличением количества исходящий связей увеличивается частота
+принятия решения актором
+-  Выраженный эффект транзитивных троек
+-  С увеличением стажа снижается сила эффекта транзитивных троек
+
+
+
+
+Спасибо за внимние! 
 
